@@ -104,7 +104,9 @@ foreach ($data as $key => $row) {
 echo "Done!";
 ```
 
-## API Reference
+---
+
+## Reference
 ```init(string $consId, string $secret, string $userKey): self```
 
 Initialize the library with your BPJS API credentials.
@@ -129,8 +131,12 @@ Submit an approval request to Mobile Faskes using a referer URL.
 
 Decrypts AES-256-CBC encoded and LZString-compressed API data.
 
+---
+
 ## License
 MIT License © 2025
+
+---
 
 ## Disclaimer
 **This library is not affiliated with BPJS Kesehatan.
