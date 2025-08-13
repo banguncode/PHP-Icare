@@ -1,0 +1,29 @@
+{
+  "name": "banguncode/php-icare",
+  "description": "A simple PHP library for accessing the health care history of JKN participants.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "icare",
+    "jkn",
+    "bridging",
+    "bpjs"
+  ],
+  "authors": [
+    {
+      "name": "Rum Haidar Fauzan",
+      "email": "rum.haidar@hotmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "ext-curl": "*",
+    "ext-openssl": "*",
+    "nullpunkt/lz-string-php": "^1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "PHPIcare\\": "src/"
+    }
+  }
+}
