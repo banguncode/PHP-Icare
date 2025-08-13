@@ -1,6 +1,6 @@
 {
   "name": "banguncode/php-icare",
-  "description": "A simple PHP library for accessing the health care history of JKN participants.",
+  "description": "A simple PHP library for accessing the healthcare history of JKN participants.",
   "type": "library",
   "license": "MIT",
   "keywords": [
