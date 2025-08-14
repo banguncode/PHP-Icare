@@ -131,8 +131,6 @@ class Icare
         }
     }
 
-    function parseUrl($url) {}
-
     /**
      * Get Cek Verifikasi 3
      * @param string $referer
