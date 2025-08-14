@@ -30,8 +30,8 @@ if ($total > 0) {
     foreach ($data as $key => $row) {
         printf("%d/%d\n", $key + 1, $total);
 
-        list($param, $kodedokter) = array_values($row);
-        $param = preg_replace('/\D/', '', $param);
+        $param = !empty($row['param']) && preg_match('/^\d+$/', $row['param']) ? $row['param'] : null;
+        $kodedokter = isset($row['kodedokter']) ? $row['kodedokter'] : null;
 
         $response = $icare->getIcareHistory($param, $kodedokter);
 
