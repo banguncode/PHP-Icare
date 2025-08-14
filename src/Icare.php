@@ -131,6 +131,8 @@ class Icare
         }
     }
 
+    function parseUrl($url) {}
+
     /**
      * Get Cek Verifikasi 3
      * @param string $referer
@@ -141,7 +143,7 @@ class Icare
         try {
             $parsedUrl = parse_url($referer);
             parse_str($parsedUrl['query'], $query);
-            $token = $query['token'];
+            $token = isset($query['token']) ? $query['token'] : "";
 
             curl_setopt($this->ch, CURLOPT_URL, $this->mobileFaskesApiUri . "/IHS/cekVerifikasi3");
             curl_setopt($this->ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -177,7 +179,7 @@ class Icare
         try {
             $parsedUrl = parse_url($referer);
             parse_str($parsedUrl['query'], $query);
-            $token = $query['token'];
+            $token = isset($query['token']) ? $query['token'] : "";
 
             curl_setopt($this->ch, CURLOPT_URL, $this->mobileFaskesApiUri . "/IHS/approvalIC");
             curl_setopt($this->ch, CURLOPT_CUSTOMREQUEST, "POST");
